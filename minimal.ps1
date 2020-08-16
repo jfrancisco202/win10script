@@ -57,7 +57,7 @@ $tweaks = @(
 	"DisableWAPPush",               # "EnableWAPPush",
 
 	### Security Tweaks ###
-	"SetUACLow",                  # "SetUACHigh",
+	"SetUACHigh",
 	# "EnableSharingMappedDrives",  # "DisableSharingMappedDrives",
 	# "DisableAdminShares",           # "EnableAdminShares",
 	"DisableSMB1",                # "EnableSMB1",
@@ -75,16 +75,16 @@ $tweaks = @(
 	# "EnableCIMemoryIntegrity",    # "DisableCIMemoryIntegrity",
 	#"DisableScriptHost",            # "EnableScriptHost",
 	#"EnableDotNetStrongCrypto",     # "DisableDotNetStrongCrypto",
-	"DisableMeltdownCompatFlag", # "EnableMeltdownCompatFlag"    
+	"EnableMeltdownCompatFlag"    
 
 	### Service Tweaks ###
-	"DisableUpdateMSRT",          # "EnableUpdateMSRT",
-	"DisableUpdateDriver",        # "EnableUpdateDriver",
+	"EnableUpdateMSRT",
+	"EnableUpdateDriver",
 	"DisableUpdateRestart",         # "EnableUpdateRestart",
 	"DisableHomeGroups",          # "EnableHomeGroups",
 	"DisableSharedExperiences",     # "EnableSharedExperiences",
 	"DisableRemoteAssistance",      # "EnableRemoteAssistance",
-	"EnableRemoteDesktop",          # "DisableRemoteDesktop",
+	"DisableRemoteDesktop",
 	"DisableAutoplay",              # "EnableAutoplay",
 	"DisableAutorun",               # "EnableAutorun",
 	"DisableStorageSense",        # "EnableStorageSense",
@@ -98,7 +98,7 @@ $tweaks = @(
 	# "DisableFastStartup",         # "EnableFastStartup",
 
 	### UI Tweaks ###
-	"DisableActionCenter",          # "EnableActionCenter",
+	"EnableActionCenter",
 	"DisableLockScreen",            # "EnableLockScreen",
 	"DisableLockScreenRS1",       # "EnableLockScreenRS1",
 	# "HideNetworkFromLockScreen",    # "ShowNetworkOnLockScreen",
@@ -186,9 +186,6 @@ $tweaks = @(
 #########
 
 Function InstallTitusProgs {
-	Write-Output "Installing Chocolatey"
-	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-	choco install chocolatey-core.extension -y
 	Write-Output "Running O&O Shutup with Recommended Settings"
 	Import-Module BitsTransfer
 	Start-BitsTransfer -Source "https://raw.githubusercontent.com/ChrisTitusTech/win10script/master/ooshutup10.cfg" -Destination ooshutup10.cfg
