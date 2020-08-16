@@ -150,6 +150,7 @@ $tweaks = @(
 
 	### Application Tweaks ###
         "DisableOneDrive",              # "EnableOneDrive",
+	"UninstallOneDrive",            # "InstallOneDrive",
 	"UninstallMsftBloat",           # "InstallMsftBloat",
 	"UninstallThirdPartyBloat",     # "InstallThirdPartyBloat",
 	# "UninstallWindowsStore",      # "InstallWindowsStore",
