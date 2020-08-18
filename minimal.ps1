@@ -18,9 +18,9 @@
 #
 #	- Dark Mode
 #	- One Command to launch and run
-#	- No Chocolatey Install
+#	- Chocolatey Install
 #	- O&O Shutup10 CFG and Run
-#	- No Added Install Programs
+#	- Added Install Programs
 #	- Added Debloat Microsoft Store Apps
 #
 ##########
